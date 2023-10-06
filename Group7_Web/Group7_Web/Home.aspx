@@ -3,8 +3,11 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         <!-- Categories Section Begin -->
 =======
+=======
+>>>>>>> Stashed changes
         <!-- Hero Section Begin -->
     <section class="hero">
         <div class="container">
@@ -67,6 +70,9 @@
     <!-- Hero Section End -->
 
     <!-- Categories Section Begin -->
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     <section class="categories">
         <div class="container">
@@ -471,8 +477,11 @@
     </section>
     <!-- Latest Product Section End -->
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
 
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 </asp:Content>
