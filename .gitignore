@@ -1,2 +1,4 @@
 
 Group7_Service/.vs/Group7_Service/config/applicationhost.config
+*.mdf
+*.ldf

@@ -12,22 +12,45 @@ namespace Group7_Service
     // NOTE: In order to launch WCF Test Client for testing this service, please select Service1.svc or Service1.svc.cs at the Solution Explorer and start debugging.
     public class Service1 : IService1
     {
-        public string GetData(int value)
+        DataClasses1DataContext data = new DataClasses1DataContext();
+        public int RegisterUser(string name, string surname, string phone,string email, string password, int usertype)
         {
-            return string.Format("You entered: {0}", value);
+            var checkUser = (from u in data.Users
+                             where u.Email.Equals(email)
+                             select u).FirstOrDefault();
+            if (checkUser == null)
+            {
+                User newUser = new User()
+                {
+                    Name = name,
+                    Surname = surname,
+                    Phone = phone,
+                    Email = email,
+                    Password = password,
+                    Type = usertype,
+                };
+                data.Users.InsertOnSubmit(newUser);
+
+                try
+                {
+                    data.SubmitChanges();
+                    return 1;//created a new user
+                }
+                catch (Exception ex)
+                {
+                    ex.GetBaseException();
+                    return -1;//error occurred
+                }
+            }
+            else
+            {
+                return 0; //user already exists
+            }
         }
 
-        public CompositeType GetDataUsingDataContract(CompositeType composite)
+        public User Login(string email, string password)
         {
-            if (composite == null)
-            {
-                throw new ArgumentNullException("composite");
-            }
-            if (composite.BoolValue)
-            {
-                composite.StringValue += "Suffix";
-            }
-            return composite;
+            throw new NotImplementedException();
         }
     }
 }

@@ -12,6 +12,9 @@ namespace Group7_Service
     public interface IService1
     {
         [OperationContract]
-        void DoWork();
+        User Login(string email, string password);
+
+        [OperationContract]
+        int RegisterUser(string name, string surname, string phone, string email, string password, int usertype);
     }
 }
