@@ -171,6 +171,7 @@
     </header>
     <!-- Header Section End -->
 
+<<<<<<< Updated upstream
     <!-- Hero Section Begin -->
     <section class="hero">
         <div class="container">
@@ -238,6 +239,11 @@
             </asp:ContentPlaceHolder>
         </div>
     </form>
+=======
+
+
+
+>>>>>>> Stashed changes
 
     <!-- Footer Section Begin -->
     <footer class="footer spad">
