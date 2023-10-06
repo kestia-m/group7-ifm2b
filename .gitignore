@@ -1,4 +1,7 @@
 
+<<<<<<< HEAD
 *.config
+=======
+>>>>>>> service
 *.mdf
 *.ldf
